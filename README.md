@@ -1,15 +1,45 @@
-直接运行终末地解谜_2.py即可。
+# Final submission checklist - 3 dashboard version
 
-使用说明：
+## Required deliverables
 
-  1.按提示输入行数列数等；
-  
-  2.在‘模块输入’窗口中输入电路模块形状，输入1代表当前格子是电路；
-  
-  3.在‘目标输入’窗口中的最左侧一列及最上面一行输入每行每列需要的电路格子数，在中间矩形部分输入1代表当前格子是电路，输入0代表当前格子不是电路但被占据。
+- [ ] Tableau packaged workbook: `.twbx`
+- [ ] Final report PDF
+- [ ] Python script
 
-一些问题：
+## Tableau workbook checks
 
-  1.当前版本使用枚举算法，效率不高，若电路模块数超过5可能运行非常长的时间；
-  
-  2.输入上不方便，以后再尝试直接识别电路模块而非手动输入。
+- [ ] Dashboard 1 title: `Health inequality across England and Wales`
+- [ ] Dashboard 2 title: `Structural profiles of health, housing and economic inequality`
+- [ ] Dashboard 3 title: `Bayesian model diagnostics and residual geography`
+- [ ] Dashboard 1 has no unknown map locations
+- [ ] Dashboard 2 cluster map has no unknown map locations
+- [ ] Dashboard 3 residual map has no unknown map locations
+- [ ] Cluster colours match across cluster map, PCA and Isomap
+- [ ] Change map colour scale is centred at 0
+- [ ] Residual map colour scale is centred at 0
+- [ ] Profile chart uses AVG, not SUM
+- [ ] No accidental selected marks remain before saving
+- [ ] Tooltips include local authority name and relevant percentages
+- [ ] Extra legends are hidden; only necessary legends remain
+
+## Data source checks
+
+- [ ] `tableau_master.csv` is used for PCA, Isomap, Bayesian scatter and profile views
+- [ ] `tableau_map_hybrid_unknown_fix.csv` is used for map views that need robust geocoding
+- [ ] Do not globally replace `tableau_master` with the hybrid map source
+
+## Report checks
+
+- [ ] Name and student ID are added
+- [ ] Report describes three dashboards, not two
+- [ ] Report mentions cluster map and residual map
+- [ ] Report explains 2011 raw percentage vs 2021 age-standardised percentage limitation
+- [ ] Report explains residual = observed minus predicted
+- [ ] Report remains within the required page range
+
+## Final packaging check
+
+- [ ] Save as `.twbx`, not `.twb`
+- [ ] Close Tableau
+- [ ] Reopen the `.twbx` from a different folder
+- [ ] Confirm dashboards, maps and tooltips still work
